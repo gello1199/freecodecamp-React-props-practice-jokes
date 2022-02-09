@@ -3,8 +3,9 @@ import React from 'react';
 const Jokes = ({ setup, punchline }) => {
     return (
         <div>
-            {setup} <br />
-            {punchline}
+            {setup && <h3>Setup: {setup}</h3>}
+            <p>Punchline: {punchline}</p>
+            <hr />
         </div>
     );
 }
