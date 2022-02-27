@@ -11,8 +11,7 @@ const Jokes = (props) => {
         <div>
             {props.setup && <h3>Setup: {props.setup}</h3>}
             {isShown && <p>Punchline: {props.punchline}</p>}  
-            {isShown && <button onClick={toggleShown}>Hide Punchline</button>}
-            {!isShown && <button onClick={toggleShown}>Show Punchline</button>}
+            <button onClick={toggleShown}>{isShown ? "Hide" : "Show"} Punchline</button>
             <hr />
         </div>
     );
