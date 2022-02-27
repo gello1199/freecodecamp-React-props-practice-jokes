@@ -10,8 +10,9 @@ const Jokes = (props) => {
     return (
         <div>
             {props.setup && <h3>Setup: {props.setup}</h3>}
-            {isShown && <p>Punchline: {props.punchline}</p>}
-            <button onClick={toggleShown}>Show Punchline</button>
+            {isShown && <p>Punchline: {props.punchline}</p>}  
+            {isShown && <button onClick={toggleShown}>Hide Punchline</button>}
+            {!isShown && <button onClick={toggleShown}>Show Punchline</button>}
             <hr />
         </div>
     );
